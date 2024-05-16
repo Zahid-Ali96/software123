@@ -1,0 +1,38 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #f0c60d;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.cart{
+    background-color: wheat;
+    border-radius: 6px;
+}
+
+.cart-item {
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+    margin-left: 20px;
+}
+.Faizullah{
+    width: 200px;
+    height: 100px;
+    padding: 5px;
+    color:black;
+    text-align: center;
+    font-size: large;
+    border-radius: 10px;
+    background-color: rgb(230, 187, 97);
+    margin-top: 10px;
+
+  }

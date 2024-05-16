@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Faizullah">
+        <h4>Faizullah </h4>
+        <h5>Roll:2K23/CSEE/27</h5>
+      </div>
+    <div class="container">
+        <h1>Products</h1>
+        <div class="products" id="products">
+            <!-- Products will be added dynamically here -->
+        </div>
+        <h2>Cart</h2>
+        <div class="cart" id="cart">
+            <!-- Cart items will be displayed here -->
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <script>
+        // Sample product data
+const productsData = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+];
+
+// Function to display products
+function displayProducts() {
+    const productsContainer = document.getElementById("products");
+    productsContainer.innerHTML = "";
+    
+    productsData.forEach(product => {
+        const productElement = document.createElement("div");
+        productElement.classList.add("product");
+        productElement.innerHTML = `
+            <h3>${product.name}</h3>
+            <p>$${product.price}</p>
+            <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+        `;
+        productsContainer.appendChild(productElement);
+    });
+}
+
+// Function to add items to the cart
+function addToCart(name, price) {
+    const cart = document.getElementById("cart");
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML = `
+        <span>${name}</span>
+        <span>$${price}</span>
+    `;
+    cart.appendChild(cartItem);
+}
+
+// Call the displayProducts function when the page loads
+window.onload = displayProducts;
+
+    </script>
+</body>
+</html>
